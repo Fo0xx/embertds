@@ -31,12 +31,12 @@
     ),
     'phpmv/php-mv-ui' => 
     array (
-      'pretty_version' => '2.3.20',
-      'version' => '2.3.20.0',
+      'pretty_version' => '2.3.21',
+      'version' => '2.3.21.0',
       'aliases' => 
       array (
       ),
-      'reference' => '47de24027643865b4b567fe4ed67429748d63713',
+      'reference' => 'd4bd11beeab50e45a591e613911ea317ae841db4',
     ),
     'phpmv/ubiquity' => 
     array (

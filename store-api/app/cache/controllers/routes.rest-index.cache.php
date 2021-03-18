@@ -1,2 +1,2 @@
 <?php
-return array();
+return array("rest"=>["/rest/(.*?)","/rest/(.+?)/(.+?)/","/rest/(.+?)/","/rest/(.+?)/(.*?)/","/rest/(.+?)/(.*?)"]);

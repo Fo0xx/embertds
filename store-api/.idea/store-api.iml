@@ -5,22 +5,22 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/frameworks/jquery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/mindplay/annotations" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/php-mv-ui" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-codeception" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-webtools" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-devtools" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-annotations" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-dev" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-commands" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/frameworks/jquery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-commands" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-dev" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-devtools" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-webtools" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/ubiquity-codeception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmv/php-mv-ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mindplay/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
