@@ -7,7 +7,7 @@ use Ubiquity\controllers\rest\RestServer;
  * @rest()
  */
 /**
- * @route("path"=>"/rest","inherited"=>false,"automated"=>false,"requirements"=>[],"priority"=>0)
+ * @route("path"=>"/rest/","inherited"=>false,"automated"=>false,"requirements"=>[],"priority"=>0)
  */
 
 
@@ -16,11 +16,11 @@ use Ubiquity\controllers\rest\RestServer;
 #[Route(path: "/rest/")]
 class MyRestController extends \Ubiquity\controllers\rest\api\json\JsonRestController {
 
-    protected function getRestServer(): RestServer {
-        $srv=parent::getRestServer();
-        $srv->setAllowedOrigin('http://127.0.0.1:4200');
-        return $srv;
-    }
+  protected function getRestServer(): RestServer {
+    $srv=parent::getRestServer();
+    $srv->setAllowedOrigin('http://127.0.0.1:4200');
+    return $srv;
+  }
 
 	/**
 	 * Returns all the instances from the model $resource.

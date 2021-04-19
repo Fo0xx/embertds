@@ -12,7 +12,7 @@ return array(
 ),
   'controllers\\MyRestController' => array(
     array('#name' => 'rest', '#type' => 'Ubiquity\\annotations\\items\\rest\\RestAnnotation', ),
-    array('#name' => 'route', '#type' => 'Ubiquity\\annotations\\items\\router\\RouteAnnotation', "path"=>"/rest","inherited"=>false,"automated"=>false,"requirements"=>[],"priority"=>0)
+    array('#name' => 'route', '#type' => 'Ubiquity\\annotations\\items\\router\\RouteAnnotation', "path"=>"/rest/","inherited"=>false,"automated"=>false,"requirements"=>[],"priority"=>0)
   ),
   'controllers\\MyRestController::all' => array(
     array('#name' => 'route', '#type' => 'Ubiquity\\annotations\\items\\router\\RouteAnnotation', "{resource}/","methods"=>["get"],"priority"=>0)

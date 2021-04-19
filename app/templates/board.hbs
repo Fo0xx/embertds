@@ -1,0 +1,34 @@
+{{page-title "Board"}}
+  <div style="text-align: right;">
+    <button class="ui black button" {{action "section"}}>Sections<i class="icon arrow right"></i></button><br>
+  </div>
+
+  <div class="ui grid">
+    <div class="column two wide"></div>
+    <div class="column twelve wide">
+      <fieldset>
+        <div class="item">
+          <h3>List of My Orders</h3>
+          <div class="ui celled list">
+            {{#each @model.orders as |order|}}
+              <LinkTo @route="my-order.order" {{action 'order' order}} @model={{order.id}}>
+              <div class="item">
+                  <div class="content">
+                    <div class="description">
+                      <div style="text-align: left">
+                        Order date : {{moment-format order.dateCreation 'DD-MM-YYYY'}}
+                      </div>
+                      <div style="text-align: right">
+                        Rest <div class="ui orange circular label">{{order.missingNumber}}</div> product(s)</div>
+                    </div>
+                  </div>
+              </div>
+              </LinkTo>
+            {{/each}}
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
+  </div>
+{{outlet}}

@@ -1,0 +1,122 @@
+{{page-title "Order"}}
+  <div style="text-align: right;">
+    <button class="ui black button" {{action "board"}}>Board<i class="icon arrow right"></i></button>
+  </div>
+
+  <div class="ui grid">
+    <div class="column two wide"></div>
+
+    <div class="column five wide">
+      <fieldset>
+        <legend>&nbsp;Client&nbsp;</legend>
+        <b>
+          User name : {{@model.order.user.name}}
+          <br>
+          User email : {{@model.order.user.email}}
+        </b>
+      </fieldset>
+    </div>
+
+    <div class="column seven wide">
+      <fieldset>
+        <legend>&nbsp;Command&nbsp;</legend>
+        <b>
+          <div class="ui list">
+            <div class="item">
+              <div class="left floated content">
+                Order N°{{@model.order.id}}
+                <br>
+                Date order : {{moment-format @model.order.dateCreation 'DD-MM-YYYY'}}
+                <br>
+                Time slot : {{moment-format @model.order.idTimeSlot.slotDate 'LLLL'}}
+              </div>
+
+              <div class="right floated content">
+                Quantity : {{@model.quantity}}
+                <br>
+                Amount : {{@model.order.amount}} €
+                <br>
+                Rest to pay : {{@model.order.toPay}} €
+              </div>
+            </div>
+          </div>
+        </b>
+      </fieldset>
+    </div>
+
+    <div class="column two wide"></div>
+    <div class="column two wide"></div>
+
+    <div class="column twelve wide">
+      <fieldset>
+        <legend>&nbsp;To Prepare&nbsp;</legend>
+
+        <div class="ui items">
+          <hr>
+          {{#each @model.product as |productList|}}
+            <div class="item">
+              <div class="content">
+                <br>
+                <div style="text-align: left">
+                  {{productList.name}}
+                  &nbsp;&nbsp;&nbsp;
+                  {{#if @model.prepared }}
+                    <i class="icon check green">&nbsp;PREPARED</i>
+                  {{else}}
+                    <LinkTo class="ui red mini button" @route="my-order.order.product-prepared" {{action 'productPrepared' }} @model={{@model.order.id}}><i class="icon close"/>&nbsp;PREPARED</LinkTo>
+                  {{/if}}
+                </div>
+                <div style="text-align: right">
+                  <div class="header">
+                    Quantity : {{@model.quantity}}
+                  </div>
+
+                  <div class="extra">
+                    Price : {{productList.price}} €
+                    <br>
+                    {{productList.promotion}} €
+                  </div>
+                </div>
+
+                <br>
+              </div>
+            </div>
+            <hr>
+          {{/each}}
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="column two wide"></div>
+    <div class="column two wide"></div>
+
+    <div class="column twelve wide">
+      <fieldset>
+        <legend>&nbsp;Advancement&nbsp;</legend>
+        <div class="ui indicating progress" data-value="{{@model.order.itemsNumber}}-{{@model.order.missingNumber}}"
+             id="progress" data-total="{{@model.order.itemsNumber}}"
+             data-percent="{{@model.order.itemsNumber}}-{{@model.order.missingNumber}}*100/{{@model.order.itemsNumber}}">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+          <div class="label">
+            {{@model.order.missingNumber}} product(s) no prepared.
+          </div>
+        </div>
+
+        <div class="ui list">
+          <div class="item">
+            <div class="left floated content">
+              <LinkTo @route="my-order.order.cancel" {{action 'cancel' }} @model={{@model.order.id}} class="ui red button"><i class="icon remove"/>&nbsp;&nbsp;Delete All</LinkTo>
+            </div>
+            <div class="right floated content">
+              <LinkTo @route="my-order.order.prepared" {{action 'prepared' }} @model={{@model.order.id}} class="ui green button"><i class="icon check"/>&nbsp;&nbsp;Command Completed</LinkTo>
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+  </div>
+
+{{outlet}}
